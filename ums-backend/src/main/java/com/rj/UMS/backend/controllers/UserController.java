@@ -48,4 +48,14 @@ public class UserController {
         return new ResponseEntity<>("Failed to update", HttpStatus.INTERNAL_SERVER_ERROR);
 
     }
+
+    @GetMapping
+    public List<UserDto> getAllUsers() {
+        List<UserDto> users = userService.getAllUser();
+        if (!ObjectUtils.isEmpty(users)) {
+
+            return users;
+        }
+        return null;
+    }
 }
