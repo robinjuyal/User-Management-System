@@ -14,7 +14,7 @@ const App = () => {
         try {
             const response = await axios.get('http://localhost:8080/api/users');
             console.log(response)
-            setUsers(response.data);
+            setUsers(response.data.data);
         } catch (error) {
             console.error('Error fetching users:', error);
         }
@@ -54,7 +54,7 @@ const App = () => {
                 <SideBarHobby hobbies={hobbies} onDragStart={handleDragStart} />
             </div>
             <div className="node-visualization">
-                <NodeVisualization users={users} fetchUsers={fetchUsers} setSelectedUser={setSelectedUser} onDrop={handleDrop}/>
+                <NodeVisualization users={users || null} fetchUsers={fetchUsers} setSelectedUser={setSelectedUser} onDrop={handleDrop}/>
             </div>
             <div className="user-form">
                 <UserForm fetchUsers={fetchUsers} selectedUser={selectedUser} setSelectedUser={setSelectedUser} />

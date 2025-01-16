@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.ObjectUtils;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -61,6 +62,7 @@ public class UserController {
         return CommonUtil.createBuildResponse(users, HttpStatus.OK);
     }
     @DeleteMapping("/{id}")
+     @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<?> deleteUser(@PathVariable String id) throws Exception {
 
         userService.deleteUser(id);
