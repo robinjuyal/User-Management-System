@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.CollectionUtils;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.rj.UMS.backend.dtos.UserDto;
 import com.rj.UMS.backend.services.UserService;
+import com.rj.UMS.backend.util.CommonUtil;
 
 @RestController
 @RequestMapping("api/users")
@@ -31,9 +33,9 @@ public class UserController {
         Boolean saveUser = userService.createUser(userDto);
 
         if (saveUser) {
-            return new ResponseEntity<>("saved successfully", HttpStatus.CREATED);
+            return CommonUtil.createBuildResponseMessage("User created successfully", HttpStatus.CREATED);
         }
-        return new ResponseEntity<>("Failed to save", HttpStatus.INTERNAL_SERVER_ERROR);
+        return CommonUtil.createErrorResponseMessage("User not created", HttpStatus.INTERNAL_SERVER_ERROR);
 
     }
 
@@ -43,26 +45,26 @@ public class UserController {
         Boolean saveUser = userService.updateUser(id, userDto);
 
         if (saveUser) {
-            return new ResponseEntity<>("Updated successfully", HttpStatus.CREATED);
+            return CommonUtil.createBuildResponseMessage("User updated successfully", HttpStatus.CREATED);
         }
-        return new ResponseEntity<>("Failed to update", HttpStatus.INTERNAL_SERVER_ERROR);
+        return CommonUtil.createErrorResponseMessage("Failed to update user", HttpStatus.INTERNAL_SERVER_ERROR);
 
     }
 
     @GetMapping
-    public List<UserDto> getAllUsers() {
+    public ResponseEntity<?> getAllUsers() {
         List<UserDto> users = userService.getAllUser();
-        if (!ObjectUtils.isEmpty(users)) {
+        if (CollectionUtils.isEmpty(users)) {
 
-            return users;
+            return ResponseEntity.noContent().build();
         }
-        return null;
+        return CommonUtil.createBuildResponse(users, HttpStatus.OK);
     }
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteUser(@PathVariable String id) throws Exception {
 
         userService.deleteUser(id);
-        return new ResponseEntity<>("User deleted successfully", HttpStatus.NO_CONTENT);
+        return CommonUtil.createBuildResponseMessage("Delete success", HttpStatus.OK);
 
     }
 
