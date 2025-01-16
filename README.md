@@ -5,7 +5,7 @@ A full-stack application with Stringboot CRUD API backend using Mysql database, 
 ## Setup Instructions 
 
 - Open the ums-backend folder to any code editor and run the project . Note - your computer must have Springboot already installed with proper setup.
-- Database in handled by Mysql therefore it should be installed on your pc
+- Database is handled by Mysql therefore it should be installed on your pc
 - If properly done your Springboot application will start to run on port 8080 .
 - Open the ums-frontend folder to any code editor and run - ' npm start '
 - The frontend code will start to run on your localhost port 3000 (Your computer should have node and npm already installed).
