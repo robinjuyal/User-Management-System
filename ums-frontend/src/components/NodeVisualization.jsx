@@ -47,7 +47,7 @@ const NodeVisualization = ({ users, fetchUsers, setSelectedUser, onDrop }) => {
     const handleDelete = async (userId) => {
         if (window.confirm('Are you sure you want to delete this user?')) {
             try {
-                await axios.delete(`http://localhost:8080/api/users/${userId}`);
+                await axios.delete(`http://localhost:8080/users/${userId}`);
                 alert('User deleted successfully!');
                 fetchUsers();
             } catch (error) {
