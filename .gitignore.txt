@@ -1,0 +1,14 @@
+# Node.js dependencies
+frontend/node_modules/
+
+# Java build files
+backend/target/
+
+# IDE settings
+.idea/
+*.iml
+.vscode/
+
+# Environment variables
+.env
+backend/src/main/resources/application.properties
