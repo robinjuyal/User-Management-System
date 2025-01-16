@@ -48,4 +48,22 @@ public class UserController {
         return new ResponseEntity<>("Failed to update", HttpStatus.INTERNAL_SERVER_ERROR);
 
     }
+
+    @GetMapping
+    public List<UserDto> getAllUsers() {
+        List<UserDto> users = userService.getAllUser();
+        if (!ObjectUtils.isEmpty(users)) {
+
+            return users;
+        }
+        return null;
+    }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteUser(@PathVariable String id) throws Exception {
+
+        userService.deleteUser(id);
+        return new ResponseEntity<>("User deleted successfully", HttpStatus.NO_CONTENT);
+
+    }
+
 }
