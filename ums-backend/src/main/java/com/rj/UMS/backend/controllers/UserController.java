@@ -48,8 +48,6 @@ public class UserController {
         return new ResponseEntity<>("Failed to update", HttpStatus.INTERNAL_SERVER_ERROR);
 
     }
-<<<<<<< Updated upstream
-=======
 
     @GetMapping
     public List<UserDto> getAllUsers() {
@@ -67,5 +65,5 @@ public class UserController {
         return new ResponseEntity<>("User deleted successfully", HttpStatus.NO_CONTENT);
 
     }
->>>>>>> Stashed changes
+
 }
