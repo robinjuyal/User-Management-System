@@ -1,0 +1,19 @@
+.user-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.hobby-node {
+    background-color: #e0f2f7;
+    border: 1px solid #03a9f4;
+    padding: 8px;
+    border-radius: 3px;
+}
+.hobby-edge{
+    stroke: #03a9f4;
+}
