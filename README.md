@@ -45,9 +45,10 @@ spring.jpa.hibernate.ddl-auto=update
 
 ```
 ## Frontend overview :-
-- The application contains the Main Visualization Area consisting of users as nodes and their hobbies as parent nodes 
-
-<img src="assets/frontend.png" alt="Alt text" width="1000" />
+- LIVE DEMO
+<img src="assets/DragAndDropHobby.gif" alt="Description of the GIF" width="1000">
+## preview
+<img src="assets/frontend.png.png" alt="Alt text" width="1000" />
 
 
 # Author 
