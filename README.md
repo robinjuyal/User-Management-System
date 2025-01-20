@@ -47,8 +47,18 @@ spring.jpa.hibernate.ddl-auto=update
 ## Frontend overview :-
 - LIVE DEMO
 <img src="assets/DragAndDropHobby.gif" alt="Description of the GIF" width="1000">
-## preview
+
+- Preview : -
 <img src="assets/frontend.png.png" alt="Alt text" width="1000" />
+
+## Backend overview :-
+- Test cases :
+  Get all users >>>
+  <img src="assets/getUsers.png" alt="Alt text" width="1000" />
+
+  Update user >>>
+  <img src="assets/updateUser.png" alt="Alt text" width="1000" />
+  
 
 
 # Author 
