@@ -4,11 +4,11 @@ PixelForge Nexus is a comprehensive secure project management system built for C
 
 ## 🏗️ System Architecture
 
-Backend: Spring Boot 3.2.1 with Spring Security
-Frontend: React 18 with modern hooks and context API
-Database: Postgres(PG Admin)
-Authentication: JWT with BCrypt password hashing
-Security: Role-based access control (RBAC)
+- Backend: Spring Boot 3.2.1 with Spring Security
+- Frontend: React 18 with modern hooks and context API
+- Database: Postgres(PG Admin)
+- Authentication: JWT with BCrypt password hashing
+- Security: Role-based access control (RBAC)
 
 ## Setup Instructions 
 
@@ -20,13 +20,13 @@ Security: Role-based access control (RBAC)
 
 ## Security features  
 
-JWT Authentication: Secure token-based authentication
-Password Hashing: BCrypt with strength 12
-Role-Based Access Control: Admin, Project Lead, Developer roles
-Input Validation: Server-side validation for all inputs
-File Upload Security: Type validation and size limits
-CORS Configuration: Secure cross-origin resource sharing
-SQL Injection Prevention: JPA/Hibernate with prepared statements`
+- JWT Authentication: Secure token-based authentication
+- Password Hashing: BCrypt with strength 12
+- Role-Based Access Control: Admin, Project Lead, Developer roles
+- Input Validation: Server-side validation for all inputs
+- File Upload Security: Type validation and size limits
+- CORS Configuration: Secure cross-origin resource sharing
+- SQL Injection Prevention: JPA/Hibernate with prepared statements`
 
 
 
