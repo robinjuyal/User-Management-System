@@ -28,7 +28,27 @@ PixelForge Nexus is a comprehensive secure project management system built for C
 - CORS Configuration: Secure cross-origin resource sharing
 - SQL Injection Prevention: JPA/Hibernate with prepared statements`
 
+## User Roles & Permissions
+Admin:
 
+- Full system access
+- Create/manage projects
+- Manage user accounts
+- Upload documents to any project
+   View all projects and data
+
+Project Lead:
+
+- Manage assigned projects
+- Assign developers to projects
+- Upload project documents
+- View team assignments
+
+Developer:
+
+- View assigned projects
+- Access project documents
+- Limited read-only access
 
 ### Application.peroperites file Springboot :-
 
