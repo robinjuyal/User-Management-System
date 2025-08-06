@@ -1,14 +1,6 @@
 # Description
 
-PixelForge Nexus is a comprehensive secure project management system built for Creative SkillZ LLC. The system features role-based access control, secure authentication, project management, team assignments, and document management capabilities.
-
-## 🏗️ System Architecture
-
-- Backend: Spring Boot 3.2.1 with Spring Security
-- Frontend: React 18 with modern hooks and context API
-- Database: Postgres(PG Admin)
-- Authentication: JWT with BCrypt password hashing
-- Security: Role-based access control (RBAC)
+A full-stack application with Stringboot CRUD API backend using Mysql database, and a React frontend featuring interactive user visualization using react-flow
 
 ## Setup Instructions 
 
@@ -18,37 +10,14 @@ PixelForge Nexus is a comprehensive secure project management system built for C
 - Open the ums-frontend folder to any code editor and run - ' npm start '
 - The frontend code will start to run on your localhost port 3000 (Your computer should have node and npm already installed).
 
-## Security features  
+## Features 
 
-- JWT Authentication: Secure token-based authentication
-- Password Hashing: BCrypt with strength 12
-- Role-Based Access Control: Admin, Project Lead, Developer roles
-- Input Validation: Server-side validation for all inputs
-- File Upload Security: Type validation and size limits
-- CORS Configuration: Secure cross-origin resource sharing
-- SQL Injection Prevention: JPA/Hibernate with prepared statements`
+- Backend: RESTful APIs with CRUD operations
+- Frontend: Interactive UI with drag-and-drop features
+- Database: Mysql for storing user data
+- Visualization: Users and their hobbies are displayed as nodes with `react-flow`
 
-## User Roles & Permissions
-Admin:
 
-- Full system access
-- Create/manage projects
-- Manage user accounts
-- Upload documents to any project
-   View all projects and data
-
-Project Lead:
-
-- Manage assigned projects
-- Assign developers to projects
-- Upload project documents
-- View team assignments
-
-Developer:
-
-- View assigned projects
-- Access project documents
-- Limited read-only access
 
 ### Application.peroperites file Springboot :-
 
